@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>The Trading God — Binary Sniper</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div>
+        <h1>Binary Sniper</h1>
+        <div class="owner">Owner: David Mamun William</div>
+      </div>
+      <div id="serverTime" class="owner"></div>
+    </header>
+
+    <div class="controls">
+      <select id="pairSelect"></select>
+      <select id="modeSelect"><option value="normal">Normal Mode</option><option value="god">God Mode</option></select>
+      <button class="start" id="startBtn">Start</button>
+      <button class="next" id="nextBtn">Next</button>
+      <button class="auto" id="autoBtn">Auto-Pick Best</button>
+      <button id="ttsBtn">🔊 TTS</button>
+    </div>
+
+    <div class="panel" id="signalPanel">
+      <div id="signalTitle">No signal yet — press Start or Auto-Pick</div>
+      <div style="display:flex;align-items:center;">
+        <div class="gauge" id="gauge"></div>
+        <canvas id="spark" class="spark" width="300" height="100"></canvas>
+      </div>
+      <div id="signalBody"></div>
+      <div class="panel-small">
+        <div class="stat" id="stat_conf">Confidence: —</div>
+        <div class="stat" id="stat_mode">Mode: —</div>
+        <div class="stat" id="stat_mtg">MTG: —</div>
+        <div class="stat" id="stat_pred">Pre-signal: —</div>
+      </div>
+      <div id="signalTimes" class="meta"></div>
+      <div id="countdown" class="count"></div>
+    </div>
+
+    <div class="panel log" id="logBox"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+  </html>
